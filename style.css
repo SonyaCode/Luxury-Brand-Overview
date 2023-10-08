@@ -1,0 +1,296 @@
+@import url('https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@300&family=Open+Sans:ital,wght@1,300&display=swap');
+
+@font-face {
+  font-family: "aguero";
+  src: url("Aguero Serif.ttf");
+}
+
+@font-face {
+  font-family: "helvetica";
+  src: url("HelveticaNeue Bold.ttf");
+}
+
+nav {
+  background-color: white;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 15px 10px 15px;
+  align-items: center;
+  box-shadow: 2px 3px 2px #f1f1f1;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  position: absolute;
+}
+
+.title {
+  display: block;
+  font-family: "aguero";
+  font-size: 4rem;
+  margin: auto;
+  color: #f5cf51;
+}
+
+.hamburger {
+  display: inline-block;
+  cursor: pointer;
+}
+
+.bar1, .bar2, .bar3 {
+  width: 35px;
+  height: 5px;
+  background-color: black;
+  margin: 6px;
+  transition: 0.4s;
+}
+
+.change .bar1 {
+  transform: rotate(-45deg) translate(-9px, 6px);
+}
+
+.change .bar2 {
+  opacity: 0;
+}
+
+.change .bar3 {
+  transform: rotate(45deg) translate(-8px, -7px);
+}
+
+.menu {
+  position: absolute;
+  top: 78px;
+  width: 20%;
+  height: 75vh;
+  background-color: white;
+  box-shadow: 3px 4px 3px #dedede;
+  padding: 50px;
+  transform: translateX(-500px);
+}
+
+.show .menu {
+  transform: translateX(-15px);
+  transition: 0.2s;
+}
+
+.menu li {
+  list-style-type: none;
+  border-bottom: 1px solid black;
+  padding: 30px;
+}
+
+.menu li:last-child {
+  border-bottom: none;
+}
+
+.menu li a {
+  color: black;
+  text-decoration: none;
+  font-family: "helvetica";
+  font-size: 20px;
+  letter-spacing: 1px;
+  text-align: center;
+  display: inline-block;
+  position: relative;
+}
+
+.menu li a::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: black;
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+
+.menu li a:hover:after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+.container {
+  padding-top: 100px;
+  display: flex;
+  justify-content: space-evenly;
+  margin-left: 25px;
+}
+
+.section {
+  width: 23%;
+  height: 85vh;
+  background-color: white;
+  box-shadow: 0px 3px 2px #dedede;
+  border-style: solid;
+  border-width: thin;
+  border-color: #d1d1d1;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.dior {
+  width: 300px;
+}
+
+.chanel {
+  width: 230px;
+}
+
+.ysl {
+  width: 280px;
+  display: block;
+  margin: auto;
+  float: center;
+  padding-top: 32%;
+}
+
+.celine {
+  width: 300px;
+}
+
+.center {
+  display: block;
+  margin: auto;
+  float: center;
+  padding-top: 50%;
+}
+
+@media screen and (max-width: 800px) {
+  .dior {
+    width: 100px;
+  }
+  
+  .chanel {
+    width: 76px;
+  }
+  
+  .ysl {
+    width: 95px;
+    display: block;
+    margin: auto;
+    float: center;
+    padding-top: 70%;
+  }
+  
+  .celine {
+    width: 100px;
+  }
+  
+  .center {
+    display: block;
+    margin: auto;
+    float: center;
+    padding-top: 85%;
+  }
+}
+
+.section:hover {
+  transform: scale(1.1);
+}
+
+.dior-info {
+  position: absolute;
+  width: 500px;
+  height: 85vh;
+  background-color: white;
+  box-shadow: 1px 2px 2px #dedede;
+  border-radius: 5px;
+  border-style: solid;
+  border-width: thin;
+  border-color: #d1d1d1;
+  left: 25%;
+  transform: translateX(-100px);
+  visibility: hidden;
+}
+
+.slide .dior-info {
+  transform: translate(0px, -1px);
+  visibility: visible;
+  transition: 0.2s;
+}
+
+.chanel-info {
+  position: absolute;
+  width: 500px;
+  height: 85vh;
+  background-color: white;
+  box-shadow: 1px 2px 2px #dedede;
+  border-radius: 5px;
+  border-style: solid;
+  border-width: thin;
+  border-color: #d1d1d1;
+  left: 49%;
+  transform: translateX(-100px);
+  visibility: hidden;
+}
+
+.slide .chanel-info {
+  transform: translate(0px, -1px);
+  visibility: visible;
+  transition: 0.2s;
+}
+
+.ysl-info {
+  position: absolute;
+  width: 500px;
+  height: 85vh;
+  background-color: white;
+  box-shadow: -1px 2px 2px #dedede;
+  border-radius: 5px;
+  border-style: solid;
+  border-width: thin;
+  border-color: #d1d1d1;
+  right: 44%;
+  transform: translateX(100px);
+  visibility: hidden;
+}
+
+.slide .ysl-info {
+  transform: translate(-50px, -1px);
+  visibility: visible;
+  transition: 0.2s;
+}
+
+.celine-info {
+  position: absolute;
+  width: 500px;
+  height: 85vh;
+  background-color: white;
+  box-shadow: -1px 2px 2px #dedede;
+  border-radius: 5px;
+  border-style: solid;
+  border-width: thin;
+  border-color: #d1d1d1;
+  right: 21%;
+  transform: translateX(100px);
+  visibility: hidden;
+}
+
+.slide .celine-info {
+  transform: translate(-30px, -1px);
+  visibility: visible;
+  transition: 0.2s;
+}
+
+h1 {
+  font-family: 'Be Vietnam Pro', sans-serif;
+}
+
+p {
+  font-family: 'Be Vietnam Pro', sans-serif;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.margin {
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+.link {
+  color: #ffe694;
+}
